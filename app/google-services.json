@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "183470705559",
+    "project_id": "interviewexchange-b41a2",
+    "storage_bucket": "interviewexchange-b41a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183470705559:android:fd3f3a3cd8f891e04852d2",
+        "android_client_info": {
+          "package_name": "com.asab.interviewexchange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183470705559-omdcsa482cvdtltv8pciaj991nh6spqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8iC4A3NGk5DPveTcbb8Avb7Bhh198hjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183470705559-omdcsa482cvdtltv8pciaj991nh6spqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
