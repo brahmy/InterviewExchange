@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ChooseLanguageFragment"
-    android:background="@android:color/white">
+    android:background="@color/peach">
     <GridView
         android:id="@+id/gridView_choose_language"
         android:layout_width="match_parent"

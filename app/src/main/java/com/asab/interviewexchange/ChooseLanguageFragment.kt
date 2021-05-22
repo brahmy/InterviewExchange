@@ -38,7 +38,6 @@ class ChooseLanguageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        System.out.println("helloString:start")
         getLanguages()
         onClickViews()
     }

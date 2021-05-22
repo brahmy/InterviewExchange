@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="5dp"
         app:cardElevation="10dp"
-        android:background="@color/white"
+        app:cardBackgroundColor="@color/orange"
         android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,23 +24,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hello_first_fragment"
+                android:textSize="17sp"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="5.0dp"
                 android:fontFamily="@font/poyntertext_bold"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
             <TextView
                 android:id="@+id/textview_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:maxLines="2"
-                android:fontFamily="@font/poyntertext_romanfour"
-                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:lineHeight="20dp"
+                android:justificationMode="none"
+                android:lineSpacingExtra="5.0dp"
+                android:fontFamily="@font/merriweather_regular"
+                android:textColor="@color/white"
                 android:text="@string/hello_first_fragment" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/more"
-                android:fontFamily="@font/poyntertext_sanslight"
+                android:textSize="13sp"
+                android:fontFamily="@font/merriweather_italic"
                 android:layout_gravity="end"
+                android:textColor="@color/white"
                 android:id="@+id/textview_more"/>
 
         </LinearLayout>

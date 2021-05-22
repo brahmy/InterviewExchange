@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="5dp"
     tools:context=".SecondFragment"
-    android:background="@android:color/darker_gray">
+    android:background="@color/peach">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,11 +18,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray"
+            android:background="@color/peach"
             android:orientation="vertical">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/orange"
         app:cardElevation="5dp">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -32,6 +33,8 @@
                 android:id="@+id/textview_question_sn0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/white"
                 android:fontFamily="@font/poyntertext_bold"
                 android:text="Q:" />
             <TextView
@@ -39,7 +42,8 @@
                 android:layout_width="wrap_content"
                 android:layout_marginStart="5dp"
                 android:maxLines="2"
-                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textColor="@color/white"
                 android:layout_toEndOf="@+id/textview_question_sn0"
                 android:fontFamily="@font/poyntertext_bold"
                 android:layout_height="wrap_content"
@@ -53,7 +57,12 @@
             android:layout_height="wrap_content"
             app:cardElevation="10dp"
             android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/orange"
             app:cardCornerRadius="5dp">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,18 +72,26 @@
                     android:id="@+id/textview_answer_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="5.0dp"
                     android:fontFamily="@font/poyntertext_bold"
                     android:text="Answer:" />
                 <TextView
                     android:id="@+id/textview_answer"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poyntertext_romanfour"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="5.0dp"
+                    android:fontFamily="@font/merriweather_regular"
                     android:layout_height="wrap_content"
-                    android:text="Question" />
+                    android:text="Answer here dgfdkmgodijg  lkngdfngl dn lngdln " />
 
             </LinearLayout>
+            </ScrollView>
         </androidx.cardview.widget.CardView>
 
         </LinearLayout>
