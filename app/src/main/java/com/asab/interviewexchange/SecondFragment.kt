@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.asab.interviewexchange.databinding.FragmentSecondBinding
+import com.bumptech.glide.Glide
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -38,12 +39,24 @@ class SecondFragment : Fragment() {
         var bundle:Bundle?=arguments
 
         binding.textviewQuestion.text=bundle?.getString("Question")
-        binding.textviewAnswer.text=bundle?.getString("Answer")
 
+        binding.textviewAnswer.text=bundle?.getString("Answer")?.replace("\\n","\n")
+
+        if(!(bundle?.getString("Image_code").equals("Empty"))) {
+            binding.imageViewCodeImage.visibility=View.VISIBLE
+            Glide.with(requireActivity())
+                .load(bundle?.getString("Image_code"))
+                .placeholder(android.R.drawable.picture_frame)
+                .error(android.R.drawable.stat_notify_error)
+                .into(binding.imageViewCodeImage);
+        }else{
+            binding.imageViewCodeImage.visibility=View.GONE
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }

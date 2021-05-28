@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 
 data class AdapterChooseLanguage(private var languageList:List<String>, private val context: Context) : BaseAdapter(){
+    private var language_icon:Int?=null
 
     override fun getItem(position: Int): Any {
         return languageList.get(position)
@@ -31,12 +32,22 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
 
 
         textView_language_name.text= languageList.get(position).toString()
+        if(languageList.get(position)=="Flutter"){
+
+            language_icon=R.drawable.ic_flutter
+        }
+
+        if(languageList.get(position)=="Java"){
+            language_icon=R.drawable.ic_java
+        }
+;
         Glide
             .with(context)
-            .load("https://miro.medium.com/max/1000/1*ilC2Aqp5sZd1wi0CopD1Hw.png")
+            .load(language_icon)
             .centerCrop()
-            .placeholder(R.drawable.googleg_standard_color_18)
-            .into(imageView_language);
+            .placeholder(android.R.drawable.picture_frame)
+            .into(imageView_language)
+
 
         return view
     }

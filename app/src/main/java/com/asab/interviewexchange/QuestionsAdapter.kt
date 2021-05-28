@@ -41,6 +41,7 @@ class QuestionsAdapter(private val context:Context,private val listQuestions:Lis
             var bundle:Bundle= Bundle()
             bundle.putString("Question",listQuestions.get(position).question)
             bundle.putString("Answer",listQuestions.get(position).answer)
+            bundle.putString("Image_code",listQuestions.get(position).image)
             Navigation.findNavController(view).navigate(R.id.SecondFragment,bundle);
         }
     }
@@ -50,7 +51,7 @@ class QuestionsAdapter(private val context:Context,private val listQuestions:Lis
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         holder.textView_question.text = listQuestions.get(position).question
-        holder.textView_answer.text = listQuestions.get(position).answer
+        holder.textView_answer.text = listQuestions.get(position).answer?.replace("\\n","")
 
     }
 

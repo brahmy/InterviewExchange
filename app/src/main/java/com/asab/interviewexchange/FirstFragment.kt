@@ -76,6 +76,7 @@ class FirstFragment : Fragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     listQuestion.clear()
+                    binding.idProgressBar.visibility=View.GONE
                     for (npsnapshot in snapshot.getChildren()) {
                         if (npsnapshot.key == lName) {
                             for (dSnapshot in npsnapshot.children) {

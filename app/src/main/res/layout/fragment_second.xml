@@ -41,7 +41,6 @@
                 android:id="@+id/textview_question"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="5dp"
-                android:maxLines="2"
                 android:textSize="20sp"
                 android:textColor="@color/milk"
                 android:layout_toEndOf="@+id/textview_question_sn0"
@@ -89,6 +88,15 @@
                     android:fontFamily="@font/merriweather_regular"
                     android:layout_height="wrap_content"
                     android:text="Answer here dgfdkmgodijg  lkngdfngl dn lngdln " />
+                <com.asab.interviewexchange.TouchImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:layout_gravity="center"
+                    android:focusable="true"
+                    android:id="@+id/imageView_code_image"
+                    android:contentDescription="TODO" />
 
             </LinearLayout>
             </ScrollView>
