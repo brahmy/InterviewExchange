@@ -35,10 +35,10 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         if(languageList.get(position)=="Flutter"){
 
             language_icon=R.drawable.ic_flutter
-        }
-
-        if(languageList.get(position)=="Java"){
+        }else if(languageList.get(position)=="Java"){
             language_icon=R.drawable.ic_java
+        }else{
+            language_icon=R.drawable.ic_logo
         }
 ;
         Glide
