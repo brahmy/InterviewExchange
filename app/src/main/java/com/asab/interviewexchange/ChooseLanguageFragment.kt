@@ -58,6 +58,7 @@ class ChooseLanguageFragment : Fragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     listLanguage.clear()
+                    binding.idProgressBar.visibility=View.GONE
                     for (npsnapshot in snapshot.getChildren()) {
                         for (dSnapshot in npsnapshot.children) {
                             listLanguage.add(dSnapshot.getKey()!!)

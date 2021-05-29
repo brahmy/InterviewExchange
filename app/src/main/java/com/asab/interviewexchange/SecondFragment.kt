@@ -42,7 +42,7 @@ class SecondFragment : Fragment() {
 
         binding.textviewAnswer.text=bundle?.getString("Answer")?.replace("\\n","\n")
 
-        if(!(bundle?.getString("Image_code").equals("Empty"))) {
+        if(!(bundle?.getString("Image_code")!!.equals("empty",ignoreCase=true))) {
             binding.imageViewCodeImage.visibility=View.VISIBLE
             Glide.with(requireActivity())
                 .load(bundle?.getString("Image_code"))
