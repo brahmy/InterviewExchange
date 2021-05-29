@@ -1,5 +1,6 @@
 package com.asab.interviewexchange
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.view.View
@@ -24,6 +25,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         return languageList.size
     }
 
+    @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view: View = View.inflate(context,R.layout.adapter_choose_language,null)
 
@@ -35,9 +37,21 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         if(languageList.get(position)=="Flutter"){
 
             language_icon=R.drawable.ic_flutter
-        }else if(languageList.get(position)=="Java"){
-            language_icon=R.drawable.ic_java
-        }else{
+        }else if(languageList.get(position)=="Java" || languageList.get(position)=="JDBC"||languageList.get(position)=="JSP"||languageList.get(position)=="Servlet"){
+
+            language_icon=R.drawable.ic_java_logo
+        }else if(languageList.get(position)=="Hibernate"){
+
+            language_icon=R.drawable.ic_hibernate
+        }else if(languageList.get(position)=="Spring"){
+
+            language_icon=R.drawable.ic_spring_logo
+        }else if(languageList.get(position)=="spring boot"){
+
+            language_icon=R.drawable.ic_spring_boot
+        }
+        else{
+
             language_icon=R.drawable.ic_logo
         }
 ;

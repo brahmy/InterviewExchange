@@ -7,7 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="peach">#FFE5B4</color>
+<!--    <color name="peach">#FFE5B4</color>-->
+    <color name="peach">#F4A896</color>
     <color name="orange">#FFA500</color>
     <color name="yellow">#FFFF00</color>
     <color name="LemonChiffon">#FAFAD2</color>
@@ -15,4 +16,8 @@
     <color name="blue">#00008B</color>
     <color name="mint_pallet">#e4fde1</color>
     <color name="milk">#fefcff</color>
+    <color name="mercat">#358597</color>
+    <color name="bistro">#F4A896</color>
+    <color name="orange_border">#ca640b</color>
+    <color name="jive">#317773</color>
 </resources>
