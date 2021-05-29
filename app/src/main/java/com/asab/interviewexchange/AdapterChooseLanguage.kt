@@ -49,6 +49,9 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="spring boot"){
 
             language_icon=R.drawable.ic_spring_boot
+        }else if(languageList.get(position)=="Kotlin"){
+
+            language_icon=R.drawable.ic_kotlin
         }
         else{
 
