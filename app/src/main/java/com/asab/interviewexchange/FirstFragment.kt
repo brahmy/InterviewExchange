@@ -1,14 +1,13 @@
 package com.asab.interviewexchange
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.asab.interviewexchange.databinding.FragmentFirstBinding
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import com.google.firebase.database.*
 
 
@@ -37,6 +36,8 @@ class FirstFragment : Fragment() {
         var bundle: Bundle? = arguments
         lName = bundle?.getString("lName")
         println("BundleData:" + lName)
+        (activity as MainActivity?)?.setActionBarTitle(lName)
+
     }
 
     override fun onCreateView(
@@ -44,6 +45,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
+
 
 //        bannerLoad()
         return binding.root
@@ -72,6 +74,7 @@ class FirstFragment : Fragment() {
     }
 
     fun getQuestions() {
+        database.keepSynced(true)
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {

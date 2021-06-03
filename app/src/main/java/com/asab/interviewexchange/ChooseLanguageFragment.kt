@@ -54,6 +54,7 @@ class ChooseLanguageFragment : Fragment() {
     }
 
     private fun getLanguages() {
+        database.keepSynced(true)
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
