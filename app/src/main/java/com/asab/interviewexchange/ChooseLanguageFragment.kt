@@ -20,6 +20,7 @@ class ChooseLanguageFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var database: DatabaseReference
     private var listLanguage: ArrayList<String>
+    private var app_info:String?=null
 
     init {
         listLanguage = ArrayList<String>()
@@ -38,17 +39,33 @@ class ChooseLanguageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getBundleData()
         getLanguages()
         onClickViews()
+    }
+
+    private fun getBundleData(){
+        val bundle:Bundle?=arguments
+        app_info=bundle?.getString("app_info")
+
     }
 
     private fun onClickViews() {
         binding.gridViewChooseLanguage.onItemClickListener =
             OnItemClickListener { parent, v, position, id ->
 
-                var bundle: Bundle = Bundle()
-                bundle.putString("lName", listLanguage.get(position))
-                findNavController().navigate(R.id.action_LanguageFragment_to_FirstFragment, bundle)
+                if(app_info=="Language") {
+                    var bundle: Bundle = Bundle()
+                    bundle.putString("lName", listLanguage.get(position))
+                    findNavController().navigate(
+                        R.id.action_LanguageFragment_to_FirstFragment,
+                        bundle
+                    )
+                }else if(app_info=="Topic"){
+                    var bundle: Bundle = Bundle()
+                    bundle.putString("lName", listLanguage.get(position))
+
+                }
 
             }
     }
@@ -62,7 +79,7 @@ class ChooseLanguageFragment : Fragment() {
                     binding.idProgressBar.visibility=View.GONE
                     for (npsnapshot in snapshot.children) {
                         //Language,Topic
-                        if(npsnapshot.key=="Language")
+                        if(npsnapshot.key==app_info)
                         for (dSnapshot in npsnapshot.children) {
                             listLanguage.add(dSnapshot.getKey()!!)
 

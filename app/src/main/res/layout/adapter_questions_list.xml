@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/merriweather_bold"
-                android:justificationMode="none"
+                android:justificationMode="inter_word"
                 android:lineHeight="20dp"
                 android:lineSpacingExtra="5.0dp"
                 android:maxLines="2"

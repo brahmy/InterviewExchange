@@ -54,8 +54,8 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        getQuestions()
         getBundleData()
+        getQuestions()
     }
 
     private fun bannerLoad() {
@@ -106,4 +106,5 @@ class FirstFragment : Fragment() {
         })
 
     }
+
 }

@@ -37,7 +37,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         if(languageList.get(position)=="Flutter"){
 
             language_icon=R.drawable.ic_flutter
-        }else if(languageList.get(position)=="Java" || languageList.get(position)=="JDBC"||languageList.get(position)=="JSP"||languageList.get(position)=="Servlet"){
+        }else if(languageList.get(position)=="Java" ||languageList.get(position)=="Java8" || languageList.get(position)=="JDBC"||languageList.get(position)=="JSP"||languageList.get(position)=="Servlet"){
 
             language_icon=R.drawable.ic_java_logo
         }else if(languageList.get(position)=="Hibernate"){
@@ -55,6 +55,9 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Android"){
 
             language_icon=R.drawable.ic_android
+        }else if(languageList.get(position)=="Interview Programs"){
+
+            language_icon=R.drawable.ic_interview_codes
         }
         else{
 
