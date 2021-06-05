@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TitleBarTextAppearance" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/droid_sans</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

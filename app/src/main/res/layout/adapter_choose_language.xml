@@ -7,35 +7,37 @@
     android:background="@drawable/border_layout"
     android:layout_height="wrap_content">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:padding="5dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView_language_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView_language"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/merriweather_bold"
-            android:textColor="@color/white"/>
-
 
         <ImageView
             android:id="@+id/imageView_language"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="10dp" />
+            android:layout_gravity="center"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:id="@+id/textView_language_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/merriweather_bold"
+            android:textColor="@color/white"/>
 
 
-    </RelativeLayout>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

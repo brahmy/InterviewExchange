@@ -24,7 +24,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hello_first_fragment"
-                android:textSize="17sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="17sp"
+                app:autoSizeMinTextSize="14sp"
                 android:justificationMode="inter_word"
                 android:lineSpacingExtra="5.0dp"
                 android:fontFamily="@font/poyntertext_bold"
@@ -42,13 +44,17 @@
                 android:maxLines="2"
                 android:text="@string/hello_first_fragment"
                 android:textColor="@color/milk"
-                android:textSize="15sp" />
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="15sp"
+                app:autoSizeMinTextSize="12sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/more"
-                android:textSize="13sp"
-                android:fontFamily="@font/merriweather_regular"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="13sp"
+                app:autoSizeMinTextSize="12sp"
+                android:fontFamily="@font/merriweather_italic"
                 android:layout_gravity="end"
                 android:textColor="@color/white"
                 android:id="@+id/textview_more"/>
