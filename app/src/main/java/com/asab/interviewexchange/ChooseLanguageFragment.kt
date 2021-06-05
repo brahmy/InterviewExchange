@@ -60,7 +60,9 @@ class ChooseLanguageFragment : Fragment() {
                 if (snapshot.exists()) {
                     listLanguage.clear()
                     binding.idProgressBar.visibility=View.GONE
-                    for (npsnapshot in snapshot.getChildren()) {
+                    for (npsnapshot in snapshot.children) {
+                        //Language,Topic
+                        if(npsnapshot.key=="Language")
                         for (dSnapshot in npsnapshot.children) {
                             listLanguage.add(dSnapshot.getKey()!!)
 
