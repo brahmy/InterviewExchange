@@ -35,7 +35,6 @@ class FirstFragment : Fragment() {
     private fun getBundleData() {
         var bundle: Bundle? = arguments
         lName = bundle?.getString("lName")
-        println("BundleData:" + lName)
         (activity as MainActivity?)?.setActionBarTitle(lName)
 
     }

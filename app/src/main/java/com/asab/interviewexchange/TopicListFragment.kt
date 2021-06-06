@@ -5,21 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.asab.interviewexchange.databinding.FragmentHomeBinding
+import com.asab.interviewexchange.databinding.FragmentChooseLangugeBinding
+import com.asab.interviewexchange.databinding.FragmentTopicListBinding
 import com.google.firebase.database.*
 
-class HomeFragment:Fragment() {
-    private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+class TopicListFragment:Fragment() {
+    private var _binding:FragmentTopicListBinding?=null
     private val binding get() = _binding!!
     private lateinit var database: DatabaseReference
-    private var homeData: ArrayList<String>
+    private var topicData: ArrayList<String>
+    private var topic_name:String?=null
+    private var l_name:String?=null
+
 
 
     init {
-        homeData = ArrayList<String>()
+        topicData = ArrayList<String>()
         initializeDB()
     }
 
@@ -32,13 +33,21 @@ class HomeFragment:Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentTopicListBinding.inflate(inflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getBundleData()
         getAppInformation()
+
+
+    }
+
+    private fun getBundleData() {
+       val bundle:Bundle?= arguments
+        topic_name=bundle?.getString("topic")
+        l_name=bundle?.getString("lName")
 
     }
 
@@ -47,17 +56,26 @@ class HomeFragment:Fragment() {
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-                    homeData.clear()
+                    topicData.clear()
                     binding.idProgressBar.visibility=View.GONE
                     for (npsnapshot in snapshot.children) {
-                        npsnapshot.key?.let { homeData.add(it) }
+                        if (npsnapshot.key == topic_name) {
+                            for (psnapshot in npsnapshot.children) {
+                                for (qsnapshot in psnapshot.children) {
+                                    qsnapshot.key?.let {
+                                        topicData.add(it)
+                                    }
+                                }
 
+                            }
                         }
-                    binding.homeRecyclerView.adapter = AdapterHome(requireContext(), homeData)
 
                     }
+                    binding.topicsRecyclerView.adapter = AdapterTopicList(requireContext(), topicData)
 
                 }
+
+            }
 
             override fun onCancelled(error: DatabaseError) {
                 println("displayError:" + error.message)
@@ -65,9 +83,9 @@ class HomeFragment:Fragment() {
 
         })
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        _binding=null
     }
-
 }

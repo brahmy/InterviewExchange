@@ -28,8 +28,26 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_LanguageFragment_to_TopicListFragment"
+            app:destination="@id/TopicListFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/TopicListFragment"
+        android:name="com.asab.interviewexchange.TopicListFragment"
+        android:label="@string/topic_list_fragment_label"
+        tools:layout="@layout/fragment_topic_list">
+        <action
+            android:id="@+id/action_TopicListFragment_to_TopicDetailsFragment"
+            app:destination="@id/TopicDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TopicDetailsFragment"
+        android:name="com.asab.interviewexchange.TopicDetailsFragment"
+        android:label="@string/topic_details_fragment_label"
+        tools:layout="@layout/fragment_topic_details">
+    </fragment>
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.asab.interviewexchange.FirstFragment"

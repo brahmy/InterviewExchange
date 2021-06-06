@@ -14,4 +14,6 @@
 <!--    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
     <string name="banner_ad_unit_id">ca-app-pub-3779092589829177/8142989729</string>
     <string name="choose_home_fragment_label">Home Categories</string>
+    <string name="topic_list_fragment_label">Topics</string>
+    <string name="topic_details_fragment_label">Topic Details</string>
 </resources>

@@ -58,6 +58,9 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Interview Programs"){
 
             language_icon=R.drawable.ic_interview_codes
+        }else if(languageList.get(position)=="React Native" || languageList.get(position)=="React" ){
+
+            language_icon=R.drawable.ic_react_native
         }
         else{
 
