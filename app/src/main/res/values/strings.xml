@@ -12,7 +12,12 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="more">more</string>
 <!--    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    banner 2 :: ca-app-pub-3779092589829177/4719045184 -->
+    <!--    banner 3 :: ca-app-pub-3779092589829177/9939528372 -->
+
     <string name="banner_ad_unit_id">ca-app-pub-3779092589829177/8142989729</string>
+    <string name="banner_ad_unit_id_topic">ca-app-pub-3779092589829177/8142989729</string>
+    <string name="banner_ad_unit_id_detailed">ca-app-pub-3779092589829177/9939528372</string>
     <string name="choose_home_fragment_label">Home Categories</string>
     <string name="topic_list_fragment_label">Topics</string>
     <string name="topic_details_fragment_label">Topic Details</string>

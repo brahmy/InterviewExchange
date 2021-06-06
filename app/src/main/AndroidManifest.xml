@@ -28,6 +28,9 @@
 
         <!--Real AdMod app ID: ca-app-pub-3779092589829177~6857828215  -->
         <!--Real AdMod unit ID: ca-app-pub-3779092589829177/8142989729-->
+        <!--Real AdMod unit ID_topic: ca-app-pub-3779092589829177/4719045184-->
+        <!--Real AdMod unit ID_detailed: ca-app-pub-3779092589829177/9939528372-->
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3779092589829177~6857828215"/>

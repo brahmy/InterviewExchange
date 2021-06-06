@@ -48,7 +48,8 @@ class MainActivity : AppCompatActivity() {
     private fun bannerLoad() {
         mAdView = binding.adView
         val adRequest = AdRequest.Builder().build()
-        mAdView!!.loadAd(adRequest)    }
+        mAdView!!.loadAd(adRequest)
+    }
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

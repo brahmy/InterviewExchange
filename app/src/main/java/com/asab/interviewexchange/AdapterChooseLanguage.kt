@@ -9,6 +9,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 data class AdapterChooseLanguage(private var languageList:List<String>, private val context: Context) : BaseAdapter(){
     private var language_icon:Int?=null
@@ -69,8 +70,9 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
 ;
         Glide
             .with(context)
-            .load(language_icon)
-            .centerCrop()
+            .load(language_icon).centerCrop().centerInside()
+            .apply(RequestOptions().override(150,150))
+            .fitCenter()
             .placeholder(android.R.drawable.picture_frame)
             .into(imageView_language)
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:padding="5dp"
     android:background="@color/peach">
     <androidx.cardview.widget.CardView
@@ -51,11 +51,24 @@
                         android:text="Topic Name" />
 
             </androidx.cardview.widget.CardView>
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:visibility="visible"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id_topic">
+            </com.google.android.gms.ads.AdView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 app:cardBackgroundColor="@color/mercat"
                 app:cardCornerRadius="5dp">
                 <ScrollView
@@ -96,28 +109,41 @@
                             android:layout_width="match_parent"
                             android:layout_height="400dp"
                             android:layout_marginTop="10dp">
-<!--
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal"
-                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                                android:id="@+id/id_image_Rv"/>
--->
+
                             <androidx.viewpager.widget.ViewPager
                                 android:id="@+id/id_image_view_pager"
                                 android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="visible" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
                                 android:visibility="visible"
-                                android:layout_height="match_parent" />
+                                android:src="@android:drawable/ic_media_previous"
+                                app:tint="@android:color/darker_gray"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"/>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                app:tint="@android:color/darker_gray"
+                                android:src="@android:drawable/ic_media_next"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"/>
 
-                            <LinearLayout
-                                android:id="@+id/ll_dots"
-                                android:layout_width="match_parent"
-                                android:layout_height="25dp"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center"
-                                android:orientation="horizontal"/>
+                            <!--
+                                                            <com.google.android.material.tabs.TabLayout
+                                                                android:id="@+id/tab_layout"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                app:tabBackground="@drawable/image_selector"
+                                                                app:tabGravity="center"
+                                                                android:layout_alignParentBottom="true"
+                                                                app:tabIndicatorHeight="0dp"/>
+                            -->
+
                         </RelativeLayout>
                     </LinearLayout>
                 </ScrollView>

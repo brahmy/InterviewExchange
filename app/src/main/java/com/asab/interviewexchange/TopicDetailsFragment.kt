@@ -9,6 +9,8 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.asab.interviewexchange.databinding.FragmentTopicDetailsBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import com.google.firebase.database.*
 
 class TopicDetailsFragment:Fragment() {
@@ -23,7 +25,9 @@ class TopicDetailsFragment:Fragment() {
     private var images:String?=null
     private var topic:String?=null
     private var listImages:ArrayList<String>
-    var currentIndex:Int=0;
+    private var mAdView: AdView? = null
+
+
 
     init {
         listImages=ArrayList<String>()
@@ -45,6 +49,7 @@ class TopicDetailsFragment:Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        bannerLoad()
         getBundledData()
         getTopicDetails()
         onClick()
@@ -57,7 +62,14 @@ class TopicDetailsFragment:Fragment() {
     }
     private fun onClick(){
 
+
     }
+    private fun bannerLoad() {
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView!!.loadAd(adRequest)
+    }
+
 
     private fun getTopicDetails() {
         database.keepSynced(true)
@@ -77,10 +89,7 @@ class TopicDetailsFragment:Fragment() {
                                         if (lsnapshot?.key == "image") {
                                             val lstValues: List<String> = lsnapshot?.value.toString().split(",")
                                             lstValues.forEach { it ->
-//                                                Log.i("Values", "value=$it")
-                                                println("images"+it)
                                                 listImages.add(it)
-                                                //Do Something
                                             }
 
                                         }
@@ -93,6 +102,7 @@ class TopicDetailsFragment:Fragment() {
                     }
 
                     binding.idImageViewPager.adapter=TopicImageAdapter(requireContext(),listImages)
+
                     binding.idTextviewTopicDetailed.text=description?.replace("\\n","\n")
                 }
 
