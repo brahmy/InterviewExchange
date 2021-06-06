@@ -47,12 +47,12 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Spring"){
 
             language_icon=R.drawable.ic_spring_logo
-        }else if(languageList.get(position)=="spring boot"){
+        }else if(languageList.get(position)=="spring boot"|| languageList.get(position)=="Micro Services"){
 
             language_icon=R.drawable.ic_spring_boot
         }else if(languageList.get(position)=="Kotlin"){
 
-            language_icon=R.drawable.ic_kotlin
+            language_icon=R.drawable.ic_kotlin_new
         }else if(languageList.get(position)=="Android"){
 
             language_icon=R.drawable.ic_android
@@ -61,7 +61,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
             language_icon=R.drawable.ic_interview_codes
         }else if(languageList.get(position)=="React Native" || languageList.get(position)=="React" ){
 
-            language_icon=R.drawable.ic_react_native
+            language_icon=R.drawable.ic_react
         }
         else{
 
