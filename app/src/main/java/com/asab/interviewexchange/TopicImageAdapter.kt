@@ -40,7 +40,6 @@ class TopicImageAdapter(internal var context: Context, internal var itemList: Li
             Glide.with(context)
                 .load(holder.sliderItem)
                 .placeholder(android.R.drawable.picture_frame)
-                .error(android.R.drawable.stat_notify_error)
                 .into(holder.itemImage)
 
         (container as ViewPager).addView(itemView)

@@ -24,6 +24,7 @@ class TopicDetailsFragment:Fragment() {
     private var description:String?=null
     private var images:String?=null
     private var topic:String?=null
+    private var topic_name:String?=null
     private var listImages:ArrayList<String>
     private var mAdView: AdView? = null
 
@@ -57,7 +58,8 @@ class TopicDetailsFragment:Fragment() {
 
     private fun getBundledData() {
         var bundle:Bundle?=arguments
-        binding.idTextviewTopic.text=bundle?.getString("topic_name")
+        topic_name=bundle?.getString("topic_name")
+        binding?.idTextviewTopic.text=topic_name
         topic=bundle?.getString("topic")
     }
     private fun onClick(){
@@ -82,16 +84,18 @@ class TopicDetailsFragment:Fragment() {
                         if (npsnapshot.key == topic) {
                             for (psnapshot in npsnapshot.children) {
                                 for (qsnapshot in psnapshot.children) {
-                                    for (lsnapshot in qsnapshot.children) {
-                                        if (lsnapshot?.key == "description") {
+                                    if (qsnapshot.key == topic_name) {
+                                        for (lsnapshot in qsnapshot.children) {
+                                            if (lsnapshot?.key == "description") {
                                             description = lsnapshot.value.toString()
                                         }
                                         if (lsnapshot?.key == "image") {
-                                            val lstValues: List<String> = lsnapshot?.value.toString().split(",")
+                                            val lstValues: List<String> =
+                                                lsnapshot?.value.toString().split(",")
                                             lstValues.forEach { it ->
                                                 listImages.add(it)
                                             }
-
+                                        }
                                         }
                                     }
                                 }

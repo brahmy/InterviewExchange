@@ -37,35 +37,41 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         textView_language_name.text= languageList.get(position).toString()
         if(languageList.get(position)=="Flutter"){
 
-            language_icon=R.drawable.ic_flutter
+            language_icon=R.drawable.ic_flutter_new
         }else if(languageList.get(position)=="Java" ||languageList.get(position)=="Java8" || languageList.get(position)=="JDBC"||languageList.get(position)=="JSP"||languageList.get(position)=="Servlet"){
 
-            language_icon=R.drawable.ic_java_logo
+            language_icon=R.drawable.ic_java_new
         }else if(languageList.get(position)=="Hibernate"){
 
-            language_icon=R.drawable.ic_hibernate
+            language_icon=R.drawable.ic_hibernate_new
         }else if(languageList.get(position)=="Spring"){
 
-            language_icon=R.drawable.ic_spring_logo
+            language_icon=R.drawable.ic_spring_new
         }else if(languageList.get(position)=="spring boot"|| languageList.get(position)=="Micro Services"){
 
-            language_icon=R.drawable.ic_spring_boot
+            language_icon=R.drawable.ic_spring_boot_new
         }else if(languageList.get(position)=="Kotlin"){
 
-            language_icon=R.drawable.ic_kotlin_new
+            language_icon=R.drawable.ic_kotlin_
         }else if(languageList.get(position)=="Android"){
 
-            language_icon=R.drawable.ic_android
+            language_icon=R.drawable.ic_android_new
         }else if(languageList.get(position)=="Interview Programs"){
 
             language_icon=R.drawable.ic_interview_codes
+        }else if(languageList.get(position)=="Python"){
+
+            language_icon=R.drawable.ic_python_new
+        }else if(languageList.get(position)=="Oracle DBA"){
+
+            language_icon=R.drawable.ic_oracle_new
         }else if(languageList.get(position)=="React Native" || languageList.get(position)=="React" ){
 
             language_icon=R.drawable.ic_react
         }
         else{
 
-            language_icon=R.drawable.ic_logo
+            language_icon=R.drawable.ic_logo_new
         }
 ;
         Glide
