@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_LanguageFragment_to_TopicListFragment"
             app:destination="@id/TopicListFragment" />
+        <action
+            android:id="@+id/action_LanguageFragment_to_NotificationFragment2"
+            app:destination="@id/NotificationFragment" />
     </fragment>
 
     <fragment
@@ -67,4 +70,10 @@
         android:name="com.asab.interviewexchange.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second"/>
+    <fragment
+        android:id="@+id/NotificationFragment"
+        android:name="com.asab.interviewexchange.NotificationFragment"
+        android:label="@string/notification_fragment_label"
+        tools:layout="@layout/fragment_notification"/>
+
 </navigation>

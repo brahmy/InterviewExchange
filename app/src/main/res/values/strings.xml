@@ -21,4 +21,5 @@
     <string name="choose_home_fragment_label">Home Categories</string>
     <string name="topic_list_fragment_label">Topics</string>
     <string name="topic_details_fragment_label">Topic Details</string>
+    <string name="notification_fragment_label">Notifications</string>
 </resources>

@@ -70,6 +70,15 @@ class ChooseLanguageFragment : Fragment() {
                         bundle
                     )
 
+                }else if(app_info=="Notifications"){
+                    var bundle: Bundle = Bundle()
+                    bundle.putString("topic", "Notifications")
+                    bundle.putString("lName", listLanguage.get(position))
+                    findNavController().navigate(
+                        R.id.NotificationFragment,
+                        bundle
+                    )
+
                 }
 
             }

@@ -32,15 +32,17 @@ class TopicImageAdapter(internal var context: Context, internal var itemList: Li
         val itemView = mLayoutInflater.inflate(R.layout.adapter_topic_images, container, false)
         holder.itemImage = itemView.findViewById(R.id.imageViewMain) as ImageView
 
-        if (pos > this.itemList.size - 1)
-            pos = 0
+        if(itemList.size!=0) {
+            if (pos > this.itemList.size - 1)
+                pos = 0
 
-        holder.sliderItem = this.itemList[pos]
+            holder.sliderItem = this.itemList[pos]
 
             Glide.with(context)
                 .load(holder.sliderItem)
                 .placeholder(android.R.drawable.picture_frame)
                 .into(holder.itemImage)
+        }
 
         (container as ViewPager).addView(itemView)
 
