@@ -76,4 +76,8 @@ class MainActivity : AppCompatActivity() {
     fun setActionBarTitle(title: String?) {
         binding.toolbar.title = title
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
 }

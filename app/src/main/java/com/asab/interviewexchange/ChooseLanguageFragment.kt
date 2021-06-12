@@ -47,6 +47,7 @@ class ChooseLanguageFragment : Fragment() {
     private fun getBundleData(){
         val bundle:Bundle?=arguments
         app_info=bundle?.getString("app_info")
+        (activity as MainActivity?)?.setActionBarTitle("Choose "+app_info)
 
     }
 
@@ -123,6 +124,5 @@ class ChooseLanguageFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 
 }

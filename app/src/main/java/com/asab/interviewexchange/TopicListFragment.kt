@@ -61,9 +61,11 @@ class TopicListFragment:Fragment() {
                     for (npsnapshot in snapshot.children) {
                         if (npsnapshot.key == topic_name) {
                             for (psnapshot in npsnapshot.children) {
-                                for (qsnapshot in psnapshot.children) {
-                                    qsnapshot.key?.let {
-                                        topicData.add(it)
+                                if (psnapshot.key == l_name) {
+                                    for (qsnapshot in psnapshot.children) {
+                                        qsnapshot.key?.let {
+                                            topicData.add(it)
+                                        }
                                     }
                                 }
 

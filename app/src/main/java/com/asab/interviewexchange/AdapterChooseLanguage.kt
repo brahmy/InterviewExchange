@@ -33,7 +33,6 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         val textView_language_name = view.findViewById<TextView>(R.id.textView_language_name) as TextView
         val imageView_language=view.findViewById<ImageView>(R.id.imageView_language)
 
-
         textView_language_name.text= languageList.get(position).toString()
         if(languageList.get(position)=="Flutter"){
 
@@ -52,7 +51,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
             language_icon=R.drawable.ic_spring_boot_
         }else if(languageList.get(position)=="Kotlin"){
 
-            language_icon=R.drawable.ic_kotlin_new
+            language_icon=R.drawable.ic_kotlin
         }else if(languageList.get(position)=="Android"){
 
             language_icon=R.drawable.ic_nadroid
@@ -74,7 +73,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }
         else{
 
-            language_icon=R.drawable.ic_logo_new
+            language_icon=R.drawable.ic_logo_
         }
 ;
         Glide

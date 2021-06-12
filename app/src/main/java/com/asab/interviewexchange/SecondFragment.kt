@@ -51,7 +51,7 @@ class SecondFragment : Fragment() {
     private fun getBundledData() {
         var bundle:Bundle?=arguments
 
-        binding.textviewQuestion.text=bundle?.getString("Question")
+        binding.textviewQuestion.text="Q: "+bundle?.getString("Question")
 
         binding.textviewAnswer.text=bundle?.getString("Answer")?.replace("\\n","\n")
 
