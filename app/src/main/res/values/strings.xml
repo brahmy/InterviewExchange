@@ -5,11 +5,8 @@
     <string name="first_fragment_label">Home</string>
     <string name="second_fragment_label">Detailed Answer</string>
     <string name="choose_language_fragment_label">Choose Language</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="more">more</string>
 <!--    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
 <!--    banner 2 :: ca-app-pub-3779092589829177/4719045184 -->

@@ -43,31 +43,34 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
             language_icon=R.drawable.ic_java_new
         }else if(languageList.get(position)=="Hibernate"){
 
-            language_icon=R.drawable.ic_hibernate_new
+            language_icon=R.drawable.ic_hibernate
         }else if(languageList.get(position)=="Spring"){
 
-            language_icon=R.drawable.ic_spring_new
+            language_icon=R.drawable.ic_spring_
         }else if(languageList.get(position)=="spring boot"|| languageList.get(position)=="Micro Services"){
 
-            language_icon=R.drawable.ic_spring_boot_new
+            language_icon=R.drawable.ic_spring_boot_
         }else if(languageList.get(position)=="Kotlin"){
 
-            language_icon=R.drawable.ic_kotlin_
+            language_icon=R.drawable.ic_kotlin_new
         }else if(languageList.get(position)=="Android"){
 
-            language_icon=R.drawable.ic_android_new
+            language_icon=R.drawable.ic_nadroid
         }else if(languageList.get(position)=="Interview Programs"){
 
-            language_icon=R.drawable.ic_interview_codes
+            language_icon=R.drawable.ic_code_
         }else if(languageList.get(position)=="Python"){
 
-            language_icon=R.drawable.ic_python_new
+            language_icon=R.drawable.ic_python
         }else if(languageList.get(position)=="Oracle DBA"){
 
-            language_icon=R.drawable.ic_oracle_new
+            language_icon=R.drawable.ic_oracle
+        }else if(languageList.get(position)=="Junit"){
+
+            language_icon=R.drawable.ic_junit
         }else if(languageList.get(position)=="React Native" || languageList.get(position)=="React" ){
 
-            language_icon=R.drawable.ic_react
+            language_icon=R.drawable.ic_react_native
         }
         else{
 
