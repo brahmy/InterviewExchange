@@ -14,12 +14,13 @@ class AdapterNotifications(private val context: Context,private val notification
 
     class MyViewHolder(view: View):RecyclerView.ViewHolder(view) {
         val textView_question: TextView
+        val textView_link: TextView
         val imageView: ImageView
 
         init {
             textView_question=view.findViewById(R.id.id_notification_textView)
             imageView=view.findViewById(R.id.id_notification_imageView)
-
+            textView_link=view.findViewById(R.id.id_notification_link)
         }
     }
 
@@ -35,6 +36,12 @@ class AdapterNotifications(private val context: Context,private val notification
 
     override fun onBindViewHolder(holder: AdapterNotifications.MyViewHolder, position: Int) {
         holder.textView_question.text=notifications.get(position).description
+        if(!notifications.get(position).link.equals("empty",ignoreCase = true)) {
+            holder.textView_link.visibility=View.VISIBLE
+            holder.textView_link.text = notifications.get(position).link
+        }else{
+            holder.textView_link.visibility=View.GONE
+        }
 
         Glide
             .with(context)

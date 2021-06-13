@@ -46,7 +46,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Spring"){
 
             language_icon=R.drawable.ic_spring_
-        }else if(languageList.get(position)=="spring boot"|| languageList.get(position)=="Micro Services"){
+        }else if(languageList.get(position).equals("Spring Boot",ignoreCase = true)|| languageList.get(position)=="Micro Services"){
 
             language_icon=R.drawable.ic_spring_boot_
         }else if(languageList.get(position)=="Kotlin"){
@@ -67,7 +67,13 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Junit"){
 
             language_icon=R.drawable.ic_junit
-        }else if(languageList.get(position)=="React Native" || languageList.get(position)=="React" ){
+        }else if(languageList.get(position)=="PHP"){
+
+            language_icon=R.drawable.ic_php
+        }else if(languageList.get(position)=="Testing"){
+
+            language_icon=R.drawable.ic_testing
+        }else if(languageList.get(position)=="React Native" || languageList.get(position).equals("React JS",ignoreCase = true) ){
 
             language_icon=R.drawable.ic_react_native
         }
@@ -75,7 +81,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
 
             language_icon=R.drawable.ic_logo_
         }
-;
+        ;
         Glide
             .with(context)
             .load(language_icon).centerCrop().centerInside()
