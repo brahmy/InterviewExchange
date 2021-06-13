@@ -52,6 +52,12 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Kotlin"){
 
             language_icon=R.drawable.ic_kotlin
+        }else if(languageList.get(position).equals("Dot Net",ignoreCase = true)){
+
+            language_icon=R.drawable.ic_dot_net
+        }else if(languageList.get(position).equals("HTML CSS JS",ignoreCase = true)){
+
+            language_icon=R.drawable.ic_html
         }else if(languageList.get(position)=="Android"){
 
             language_icon=R.drawable.ic_nadroid
