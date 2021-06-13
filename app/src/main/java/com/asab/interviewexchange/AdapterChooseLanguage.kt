@@ -64,10 +64,13 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Interview Programs"){
 
             language_icon=R.drawable.ic_code_
+        }else if(languageList.get(position).equals("MongoDB",ignoreCase = true)){
+
+            language_icon=R.drawable.ic_db
         }else if(languageList.get(position)=="Python"){
 
             language_icon=R.drawable.ic_python
-        }else if(languageList.get(position)=="Oracle DBA"){
+        }else if(languageList.get(position)=="Oracle DBA"|| languageList.get(position).equals("SQL",ignoreCase = true)){
 
             language_icon=R.drawable.ic_oracle
         }else if(languageList.get(position)=="Junit"){
