@@ -1,5 +1,6 @@
 package com.asab.interviewexchange
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -62,22 +63,46 @@ class MainActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+/*
         return when (item.itemId) {
             R.id.action_share -> true
             else -> super.onOptionsItemSelected(item)
         }
+*/
+        when (item.itemId) {
+            R.id.action_share -> {
+                shareApp()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
+        println("coming here")
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
+
     fun setActionBarTitle(title: String?) {
         binding.toolbar.title = title
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
+    private fun shareApp() {
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.type = "text/plain"
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Interview Exchange")
+        var shareMessage = "\nLet me recommend you this application\n\n"
+        shareMessage =
+            """
+            ${shareMessage}https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}
+            
+            
+            """.trimIndent()
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+        startActivity(Intent.createChooser(shareIntent, "choose one"))
+
     }
 }
