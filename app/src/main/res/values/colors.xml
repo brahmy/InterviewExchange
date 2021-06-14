@@ -7,6 +7,7 @@
     <!--    <color name="peach">#FFE5B4</color>-->
     <color name="milk">#fefcff</color>
     <color name="mercat">#358597</color>
-    <color name="bgm_main">#eeeee4</color>
+<!--    <color name="bgm_main">#eeeee4</color>-->
+    <color name="bgm_main">#FFE5B4</color>
     <color name="bgm_card">#1e81b0</color>
 </resources>
