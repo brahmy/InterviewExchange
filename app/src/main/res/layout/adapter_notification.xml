@@ -54,6 +54,18 @@
             android:focusable="true"
             android:id="@+id/id_notification_imageView"/>
     </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/id_notification_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/merriweather_regular"
+                android:autoSizeMaxTextSize="18sp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:autoLink="web"
+                android:autoSizeMinTextSize="14sp"
+                android:autoSizeTextType="uniform"/>
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

@@ -1,7 +1,6 @@
 package com.asab.interviewexchange
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -46,7 +45,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Spring"){
 
             language_icon=R.drawable.ic_spring_
-        }else if(languageList.get(position)=="spring boot"|| languageList.get(position)=="Micro Services"){
+        }else if(languageList.get(position).equals("Spring Boot",ignoreCase = true)|| languageList.get(position)=="Micro Services"){
 
             language_icon=R.drawable.ic_spring_boot_
         }else if(languageList.get(position)=="Kotlin"){
@@ -67,7 +66,13 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Junit"){
 
             language_icon=R.drawable.ic_junit
-        }else if(languageList.get(position)=="React Native" || languageList.get(position)=="React" ){
+        }else if(languageList.get(position)=="PHP"){
+
+            language_icon=R.drawable.ic_php
+        }else if(languageList.get(position)=="Testing"){
+
+            language_icon=R.drawable.ic_logo_
+        }else if(languageList.get(position)=="React Native" || languageList.get(position).equals("React JS",ignoreCase = true) ){
 
             language_icon=R.drawable.ic_react_native
         }
@@ -86,6 +91,16 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
 
 
         return view
+    }
+
+    // method for filtering our recyclerview items.
+    fun filterList(filterllist: List<String>) {
+        // below line is to add our filtered
+        // list in our course array list.
+        languageList = filterllist
+        // below line is to notify our adapter
+        // as change in recycler view data.
+        notifyDataSetChanged()
     }
 
 }
