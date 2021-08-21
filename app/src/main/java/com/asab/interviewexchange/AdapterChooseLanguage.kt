@@ -81,6 +81,12 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Testing"){
 
             language_icon=R.drawable.ic_testing
+        }else if(languageList.get(position)=="DevOps"){
+
+            language_icon=R.drawable.ic_dev_ops
+        }else if(languageList.get(position)=="AWS"){
+
+            language_icon=R.drawable.ic_aws
         }else if(languageList.get(position)=="React Native" || languageList.get(position).equals("React JS",ignoreCase = true) ){
 
             language_icon=R.drawable.ic_react_native

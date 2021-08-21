@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:iconifiedByDefault="false"
-            android:queryHint="Search Language"
+            android:queryHint="Search Question"
             android:theme="@style/SearchViewTheme"/>
 
         <androidx.recyclerview.widget.RecyclerView
