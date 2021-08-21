@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.navigation.fragment.findNavController
 
 
-class QuestionsAdapter(private val context:Context,private val listQuestions:List<QuestionsDetails>):RecyclerView.Adapter<QuestionsAdapter.MyViewHolder>(){
+class QuestionsAdapter(private val context:Context,private var listQuestions:List<QuestionsDetails>):RecyclerView.Adapter<QuestionsAdapter.MyViewHolder>(){
 
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -63,6 +63,15 @@ class QuestionsAdapter(private val context:Context,private val listQuestions:Lis
             event.invoke(bindingAdapterPosition, itemViewType)
         }
         return this
+    }
+    // method for filtering our recyclerview items.
+    fun filterList(filterllist: List<QuestionsDetails>) {
+        // below line is to add our filtered
+        // list in our course array list.
+        listQuestions = filterllist
+        // below line is to notify our adapter
+        // as change in recycler view data.
+        notifyDataSetChanged()
     }
 
 }
