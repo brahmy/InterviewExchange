@@ -85,11 +85,6 @@ class FirstFragment : Fragment() {
                                 val questionsDetails: QuestionsDetails =
                                     dSnapshot.getValue(QuestionsDetails::class.java)!!
                                 questionsDetails?.let { listQuestion.add(it) }
-/*
-                            for (eSnapshot in dSnapshot.children) {
-
-                            }
-*/
                         }
                         }
 
