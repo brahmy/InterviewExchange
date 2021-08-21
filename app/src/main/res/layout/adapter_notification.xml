@@ -17,25 +17,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="@color/bgm_card"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
         <TextView
             android:id="@+id/id_notification_textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/merriweather_regular"
+            android:fontFamily="@font/bookerly_regular"
             android:autoSizeMaxTextSize="18sp"
             android:padding="10dp"
             android:textColor="@color/white"
             android:autoSizeMinTextSize="14sp"
             android:autoSizeTextType="uniform"/>
-        </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,11 +49,12 @@
                 android:id="@+id/id_notification_link"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/merriweather_regular"
+                android:fontFamily="@font/bookerly_bold"
                 android:autoSizeMaxTextSize="18sp"
                 android:padding="10dp"
-                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
                 android:autoLink="web"
+                android:textColorLink="@color/milk"
                 android:autoSizeMinTextSize="14sp"
                 android:autoSizeTextType="uniform"/>
 

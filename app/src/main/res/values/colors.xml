@@ -4,9 +4,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-<!--    <color name="peach">#FFE5B4</color>-->
+    <!--    <color name="peach">#FFE5B4</color>-->
     <color name="milk">#fefcff</color>
     <color name="mercat">#358597</color>
-    <color name="bgm_main">#e4b7a0</color>
-    <color name="bgm_card">#2f5061</color>
+<!--    <color name="bgm_main">#eeeee4</color>-->
+    <color name="bgm_main">#FFE5B4</color>
+    <color name="bgm_card">#1e81b0</color>
 </resources>

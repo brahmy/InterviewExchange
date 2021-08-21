@@ -51,16 +51,25 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
         }else if(languageList.get(position)=="Kotlin"){
 
             language_icon=R.drawable.ic_kotlin
+        }else if(languageList.get(position).equals("Dot Net",ignoreCase = true)){
+
+            language_icon=R.drawable.ic_dot_net
+        }else if(languageList.get(position).equals("HTML CSS JS",ignoreCase = true)){
+
+            language_icon=R.drawable.ic_html
         }else if(languageList.get(position)=="Android"){
 
             language_icon=R.drawable.ic_nadroid
         }else if(languageList.get(position)=="Interview Programs"){
 
             language_icon=R.drawable.ic_code_
+        }else if(languageList.get(position).equals("MongoDB",ignoreCase = true)){
+
+            language_icon=R.drawable.ic_db
         }else if(languageList.get(position)=="Python"){
 
             language_icon=R.drawable.ic_python
-        }else if(languageList.get(position)=="Oracle DBA"){
+        }else if(languageList.get(position)=="Oracle DBA"|| languageList.get(position).equals("SQL",ignoreCase = true)){
 
             language_icon=R.drawable.ic_oracle
         }else if(languageList.get(position)=="Junit"){
@@ -71,7 +80,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
             language_icon=R.drawable.ic_php
         }else if(languageList.get(position)=="Testing"){
 
-            language_icon=R.drawable.ic_logo_
+            language_icon=R.drawable.ic_testing
         }else if(languageList.get(position)=="React Native" || languageList.get(position).equals("React JS",ignoreCase = true) ){
 
             language_icon=R.drawable.ic_react_native
@@ -80,7 +89,7 @@ data class AdapterChooseLanguage(private var languageList:List<String>, private 
 
             language_icon=R.drawable.ic_logo_
         }
-;
+        ;
         Glide
             .with(context)
             .load(language_icon).centerCrop().centerInside()

@@ -29,7 +29,7 @@
                 app:autoSizeMinTextSize="14sp"
                 android:justificationMode="inter_word"
                 android:lineSpacingExtra="5.0dp"
-                android:fontFamily="@font/poyntertext_bold"
+                android:fontFamily="@font/bookerly_bold"
                 android:textColor="@color/milk" />
 
             <TextView
@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/merriweather_bold"
+                android:fontFamily="@font/bookerly_regular"
                 android:justificationMode="inter_word"
                 android:lineHeight="20dp"
                 android:lineSpacingExtra="5.0dp"
@@ -54,7 +54,7 @@
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="13sp"
                 app:autoSizeMinTextSize="12sp"
-                android:fontFamily="@font/merriweather_italic"
+                android:fontFamily="@font/bookerly_regular_italic"
                 android:layout_gravity="end"
                 android:textColor="@color/milk"
                 android:id="@+id/textview_more"/>

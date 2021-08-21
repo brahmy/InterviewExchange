@@ -35,8 +35,8 @@
                         android:id="@+id/textview_question"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:autoSizeMaxTextSize="18sp"
-                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="16sp"
+                        android:autoSizeMinTextSize="14sp"
                         android:padding="10dp"
                         android:autoSizeTextType="uniform"
                         android:layout_gravity="center_vertical|end"
@@ -70,8 +70,7 @@
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/bgm_card"
-                    android:paddingBottom="50dp">
+                    android:background="@color/bgm_card">
 
                     <LinearLayout
                         android:layout_width="match_parent"

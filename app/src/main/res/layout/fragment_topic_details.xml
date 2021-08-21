@@ -46,7 +46,7 @@
                         android:textColor="@color/milk"
                         android:padding="10dp"
                         android:layout_toEndOf="@+id/textview_question_sn0"
-                        android:fontFamily="@font/merriweather_bold"
+                        android:fontFamily="@font/bookerly_bold"
                         android:layout_height="wrap_content"
                         android:text="Topic Name" />
 
@@ -90,7 +90,7 @@
                             android:textColor="@color/milk"
                             android:justificationMode="inter_word"
                             android:lineSpacingExtra="5.0dp"
-                            android:fontFamily="@font/merriweather_bold"
+                            android:fontFamily="@font/bookerly_bold"
                             android:text="Explanation:" />
                         <TextView
                             android:id="@+id/id_textview_topic_detailed"
@@ -102,7 +102,7 @@
                             android:textColor="@color/milk"
                             android:justificationMode="inter_word"
                             android:lineSpacingExtra="5.0dp"
-                            android:fontFamily="@font/merriweather_regular"
+                            android:fontFamily="@font/bookerly_regular"
                             android:layout_height="wrap_content"
                             android:text="Answer here dgfdkmgodijg  lkngdfngl dn lngdln " />
                         <RelativeLayout
