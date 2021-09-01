@@ -67,7 +67,9 @@ class ChooseLanguageFragment : Fragment() {
                 }else if(app_info=="Topic"){
                     var bundle: Bundle = Bundle()
                     bundle.putString("topic", "Topic")
-                    bundle.putString("lName", listLanguage.get(position))
+//                    bundle.putString("lName", listLanguage.get(position))
+                    bundle.putString("lName", parent.adapter.getItem(position).toString())
+
                     findNavController().navigate(
                         R.id.TopicListFragment,
                         bundle
@@ -76,7 +78,8 @@ class ChooseLanguageFragment : Fragment() {
                 }else if(app_info=="Notifications"){
                     var bundle: Bundle = Bundle()
                     bundle.putString("topic", "Notifications")
-                    bundle.putString("lName", listLanguage.get(position))
+//                    bundle.putString("lName", listLanguage.get(position))
+                    bundle.putString("lName", parent.adapter.getItem(position).toString())
                     findNavController().navigate(
                         R.id.NotificationFragment,
                         bundle
