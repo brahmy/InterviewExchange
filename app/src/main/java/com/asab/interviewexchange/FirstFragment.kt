@@ -1,9 +1,12 @@
 package com.asab.interviewexchange
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import com.asab.interviewexchange.databinding.FragmentFirstBinding
@@ -47,7 +50,7 @@ class FirstFragment : Fragment() {
     ): View? {
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
 
-
+//        Utils.hideSoftKeyBoard(requireActivity())
 //        bannerLoad()
         widgetListeners()
         return binding.root
@@ -115,6 +118,10 @@ class FirstFragment : Fragment() {
         _binding = null
     }
 
+    override fun onPause() {
+        super.onPause()
+    }
+
     fun getQuestions() {
         database.keepSynced(true)
         database.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -146,5 +153,4 @@ class FirstFragment : Fragment() {
         })
 
     }
-
 }

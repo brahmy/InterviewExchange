@@ -7,9 +7,9 @@
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launch_logo"
+        android:icon="@drawable/ic_interview_exchange"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_launch_logo"
+        android:roundIcon="@drawable/ic_interview_exchange"
         android:supportsRtl="true"
         android:hardwareAccelerated="true"
         android:theme="@style/Theme.InterviewExchange.NoActionBar"
@@ -24,7 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
         <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
 
         <!--Real AdMod app ID: ca-app-pub-3779092589829177~6857828215  -->
@@ -32,9 +34,12 @@
         <!--Real AdMod unit ID_topic: ca-app-pub-3779092589829177/4719045184-->
         <!--Real AdMod unit ID_detailed: ca-app-pub-3779092589829177/9939528372-->
 
+<!--
+        old banner app id:ca-app-pub-3779092589829177~6857828215
+-->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3779092589829177~6857828215"/>
+            android:value="@string/app_id"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

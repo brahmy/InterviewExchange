@@ -59,7 +59,7 @@ class ChooseLanguageFragment : Fragment() {
 
                 if(app_info=="Language") {
                     var bundle: Bundle = Bundle()
-                    bundle.putString("lName", listLanguage.get(position))
+                    bundle.putString("lName", parent.adapter.getItem(position).toString())
                     findNavController().navigate(
                         R.id.FirstFragment,
                         bundle

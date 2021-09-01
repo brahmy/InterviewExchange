@@ -12,9 +12,24 @@
 <!--    banner 2 :: ca-app-pub-3779092589829177/4719045184 -->
     <!--    banner 3 :: ca-app-pub-3779092589829177/9939528372 -->
 
+<!--
+    old banner unit id's
+-->
+    <string name="app_id">ca-app-pub-3779092589829177~6857828215</string>
     <string name="banner_ad_unit_id">ca-app-pub-3779092589829177/8142989729</string>
     <string name="banner_ad_unit_id_topic">ca-app-pub-3779092589829177/8142989729</string>
     <string name="banner_ad_unit_id_detailed">ca-app-pub-3779092589829177/9939528372</string>
+
+<!--
+    new account banners
+-->
+<!--
+    <string name="app_id">ca-app-pub-6780722212491336~2282666068</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6780722212491336/9969584393</string>
+    <string name="banner_ad_unit_id_topic">ca-app-pub-6780722212491336/3268444679</string>
+    <string name="banner_ad_unit_id_detailed">ca-app-pub-6780722212491336/7949640304</string>
+-->
+
     <string name="choose_home_fragment_label">Home Categories</string>
     <string name="topic_list_fragment_label">Topics</string>
     <string name="topic_details_fragment_label">Topic Details</string>
