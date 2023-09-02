@@ -4,16 +4,41 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("/home/brahmaiah/brahmy_projects/interview_exchange/gradle/keystore.properties")
+
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+
 android {
-    compileSdkVersion 30
+    signingConfigs {
+        debug {
+            storeFile file('/home/brahmaiah/brahmy_projects/interview_exchange/app/src/interview_exchange_keystore.jks')
+            keyAlias 'Key0'
+            storePassword 'brahmaiah@143'
+            keyPassword 'brahmaiah@143'
+        }
+        release {
+            storeFile file('/home/brahmaiah/brahmy_projects/interview_exchange/app/src/interview_exchange_keystore.jks')
+            keyAlias 'Key0'
+            storePassword 'brahmaiah@143'
+            keyPassword 'brahmaiah@143'
+        }
+    }
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.asab.interviewexchange"
         minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 7
-        versionName "1.0.6"
+        targetSdkVersion 33
+        versionCode 8
+        versionName "1.0.7"
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -49,6 +74,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
     implementation 'com.google.firebase:firebase-database:19.7.0'
     implementation "androidx.recyclerview:recyclerview:1.2.0"
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'com.google.firebase:firebase-ads:20.0.0'

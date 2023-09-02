@@ -3,6 +3,7 @@ package com.asab.interviewexchange
 import android.content.Context
 import android.graphics.Paint
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.navigation.fragment.findNavController
+import java.io.Serializable
 
 
 class QuestionsAdapter(private val context:Context,private var listQuestions:List<QuestionsDetails>):RecyclerView.Adapter<QuestionsAdapter.MyViewHolder>(){
@@ -39,10 +41,20 @@ class QuestionsAdapter(private val context:Context,private var listQuestions:Lis
 
         return MyViewHolder(view).listen { position, type ->
             var bundle:Bundle= Bundle()
-            bundle.putString("Question",listQuestions.get(position).question)
-            bundle.putString("Answer",listQuestions.get(position).answer)
-            bundle.putString("Image_code",listQuestions.get(position).image)
-            Navigation.findNavController(view).navigate(R.id.SecondFragment,bundle);
+            var questionsDetails = listQuestions[position]
+
+           /* bundle.putString("Question", listQuestions[position].question)
+            bundle.putString("Answer", listQuestions[position].answer)
+            bundle.putString("Image_code", listQuestions[position].image)*/
+
+            bundle.putSerializable("answers",listQuestions as Serializable)
+            bundle.putInt("position",position)
+
+//          bundle.putSerializable("answers",questionsDetails as Serializable)
+
+
+//            Navigation.findNavController(view).navigate(R.id.SecondFragment,bundle);
+            Navigation.findNavController(view).navigate(R.id.AnswerDetailsFragment,bundle);
         }
     }
 

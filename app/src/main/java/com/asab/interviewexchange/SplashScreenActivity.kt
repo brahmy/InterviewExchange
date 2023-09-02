@@ -1,5 +1,6 @@
 package com.asab.interviewexchange
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -11,6 +12,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 
+@SuppressLint("CustomSplashScreen")
 class SplashScreenActivity:AppCompatActivity() {
     private val SPLASH_TIME_OUT:Long = 4000L
     override fun onCreate(savedInstanceState: Bundle?) {

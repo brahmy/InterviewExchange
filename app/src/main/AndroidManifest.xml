@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.asab.interviewexchange">
 
+    <!--AndroidDebugKey-->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 
     <application
         android:name=".MyApplication"
@@ -17,7 +19,8 @@
         <activity
             android:name=".SplashScreenActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.InterviewExchange">
+            android:theme="@style/Theme.InterviewExchange"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +28,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="stateHidden"
+            android:exported="false">
         </activity>
         <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
 

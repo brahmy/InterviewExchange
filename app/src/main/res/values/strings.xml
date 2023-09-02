@@ -35,4 +35,5 @@
     <string name="topic_details_fragment_label">Topic Details</string>
     <string name="notification_fragment_label">Notifications</string>
     <string name="action_share">Share</string>
+    <string name="answer_details_fragment">Answer Details Fragment</string>
 </resources>

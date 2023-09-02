@@ -59,17 +59,26 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment"
+            app:destination="@id/AnswerDetailsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
+<!--
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.asab.interviewexchange.SecondFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second"/>
+        tools:layout="@layout/fragment_second"
+        />
+-->
+    <fragment
+        android:id="@+id/AnswerDetailsFragment"
+        android:name="com.asab.interviewexchange.AnswerDetailsFragment"
+        android:label="@string/answer_details_fragment"
+        tools:layout="@layout/fragment_second"
+        />
     <fragment
         android:id="@+id/NotificationFragment"
         android:name="com.asab.interviewexchange.NotificationFragment"

@@ -13,6 +13,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.asab.interviewexchange.databinding.ActivityMainBinding
+import com.bumptech.glide.util.Util
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
@@ -96,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.type = "text/plain"
         shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Interview Exchange")
-        var shareMessage = "\nLet me recommend you this application\n\n"
+        var shareMessage = "\nLet me share you this application with\n\n"
         shareMessage =
             """
             ${shareMessage}https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}
